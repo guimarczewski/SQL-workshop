@@ -139,7 +139,13 @@ Para instalar o pgAdmin, vamos acessar o Docker Hub e buscar a imagem oficial e 
     ```bash
     docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' meu_container_postgres
     ```
-    
+
+Ou podemos acessar pela CLI
+
+    ```bash
+    sudo apt install postgresql-client
+    psql -h <host> -p 5432 -U <meu_usuario> --dbname=<meu_banco>
+    ```
 Após isso você pode acessar o pgAdmin no seu navegador e criar uma conexão com o banco de dados.
 
 #### Vamos criar nossa tabela
